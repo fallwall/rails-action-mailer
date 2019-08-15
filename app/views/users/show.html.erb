@@ -1,0 +1,13 @@
+<h2><%= @user.name %></h2>
+<p><%= @user.bio %></p>
+<hr>
+<p><%= link_to "Users List", users_path %></p>
+
+<% if current_user == @user %>
+
+  <p><%= link_to "Edit", edit_user_path %></p>
+  <%= form_for @user, html: {method: "delete"} do |f| %>
+    <%= f.submit "Delete #{@user.name}" %>
+  <% end %>
+
+<% end %>

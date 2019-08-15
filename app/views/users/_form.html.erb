@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_area :bio, placeholder: "Bio" %>
+  
+  <%= f.email_field :email, placeholder: "Email" %>
+  
+  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.submit "Submit"%>
+<% end %>

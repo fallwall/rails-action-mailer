@@ -1,0 +1,9 @@
+<h2>Edit <%= @post.title %></h2>
+<%= form_for [@user, @post] do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %>
+  <%= f.text_area :body, placeholder: "Body" %>
+  <%= f.text_field :user_id, value: @user.id %>
+  <%= f.submit "Submit"%>
+<% end %>
+
+<%= link_to @post.title, user_post_path(@user, @post) %>
